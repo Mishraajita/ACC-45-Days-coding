@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int num,reverse_no;
+	
+	cout<<"Enter no. which you want to check if palindrome or not\n";
+	cin>>num;
+	if(num>=0){
+	
+	int n1=num;
+	while(num!=0){
+	int	remainder = num%10;
+		reverse_no = reverse_no*10 + remainder;
+		num/=10;
+	}
+	if(n1==reverse_no)
+	cout<<n1<<"\tis a palindrome number";
+	else
+	cout<<n1<<"\tis not a palindrome number";}
+	else 
+	cout<<"Negative numbers can not be palindromic";
+}
