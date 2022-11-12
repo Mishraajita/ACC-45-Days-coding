@@ -1,0 +1,36 @@
+/*
+typedef struct node
+{
+  int data;
+  struct node*next,*prev;
+  
+  node(int x){
+      data = x;
+      next = NULL;
+      prev = NULL;
+  }
+  
+} Node;
+*/
+
+class Solution {
+public:
+    Node *rotateDLL(Node *start,int p)
+    {
+        //Add your code here
+        struct node *temp=start,*last=start,*head=NULL;
+        while(last->next!=NULL){
+            last=last->next;
+        }
+        p-=1;
+        while(p--){
+            temp=temp->next;
+        }
+        head=temp->next;
+        head->prev=NULL;
+        temp->next=NULL;
+        start->prev=last;
+        last->next=start;
+        return head;
+    }
+};
