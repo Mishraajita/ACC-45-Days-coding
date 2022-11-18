@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+int main(){
+	cout<<"enter no. of jobs\n";
+	int n;
+	cin>>n;
+	cout<<"enter profit\n";
+	int p[n];
+	for(int i=0;i<n;i++) cin>>p[i];
+	cout<<"enter deadline\n";
+	int d[n];
+	for(int i=0;i<n;i++) cin>>d[i];
+	for(int i=0;i<n-1;i++)
+	  for(int j=0;j<n-i-1;j++){
+	  	if(p[j]<p[j+1]){
+	  		int t;
+	  		t=p[j];
+	  		p[j]=p[j+1];
+	  		p[j+1]=t;
+	  		t=d[j];
+	  		d[j]=d[j+1];
+	  		d[j+1]=t;
+	  		
+		  }
+	  }
+	  int max=0;
+	  for(int i=0;i<n;i++){
+	  	if(d[i]>max) max=d[i];
+	  }
+	  
+	  int res[max];
+	  for(int i=0;i<max;i++)
+	  res[i]=-1;
+	  for(int i=0;i<n;i++){
+	  	if(res[d[i]-1]!=-1){
+	  		
+	  			int a=d[i]-2;
+	  			
+	  			while(a>=0) {
+				 
+				 if(res[a]==-1){
+				 	res[a]=i;
+				 	break;
+				 }
+				 a--;
+				  }
+}				 	  			
+	  		  
+					  
+		
+		  
+	  	else res[d[i]-1]=i;
+	  }
+	  cout<<"output\n";
+	  for(int i=0;i<max;i++) cout<<res[i]<<"\t";
+	  
+	
+}
