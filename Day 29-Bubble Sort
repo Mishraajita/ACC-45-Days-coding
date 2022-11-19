@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+class bs{
+	private:
+		int size;
+		int a[100];
+		public:
+			bs(int n){
+				size=n;
+			}
+			void input(){
+				for(int i=0;i<size;i++) cin>>a[i];
+			}
+			void display(){
+				for(int i=0;i<size;i++) cout<<a[i];
+			}
+			void bubble(){
+				for(int i=0;i<size-1;i++) //for passes
+				   for(int j=0;j<size-1-i;j++){  //for comparing elements
+				   	 if(a[j]>a[j+1]){
+				   	 	int t=a[j];
+				   	 	a[j]=a[j+1];
+				   	 	a[j+1]=t;
+						}
+				   }
+			}
+};
+int main(){
+	bs obj(6);
+	obj.input();
+	obj.display();
+	cout<<endl;
+	obj.bubble();
+	obj.display();
+}
