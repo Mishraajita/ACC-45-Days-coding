@@ -1,0 +1,90 @@
+//{ Driver Code Starts
+// C++ implementation to convert a
+// sentence into its equivalent
+// mobile numeric keypad sequence
+#include <bits/stdc++.h>
+using namespace std;
+string printSequence(string input);
+// Driver function
+int main()
+{
+	int t;
+	cin>>t;
+	cin.ignore();
+	while(t--)
+    {
+        string s;
+        getline(cin,s);
+        cout<<printSequence(s)<<endl;
+    }
+	return 0;
+}
+
+// } Driver Code Ends
+
+
+string printSequence(string S)
+{
+    //code here.
+    int i=0;
+    while(i<S.length()){
+        switch(S[i]){
+            case 'A':cout<<"2";
+                  break;
+            case 'B':cout<<"22";
+                  break;  
+            case 'C':cout<<"222";
+                  break; 
+            case 'D':cout<<"3";
+                  break; 
+            case 'E':cout<<"33";
+                  break; 
+            case 'F':cout<<"333";
+                  break; 
+            case 'G':cout<<"4";
+                  break; 
+            case 'H':cout<<"44";
+                  break; 
+            case 'I':cout<<"444";
+                  break; 
+             
+                  case 'J':cout<<"5";
+                  break; 
+                  case 'K':cout<<"55";
+                  break; 
+                  case 'L':cout<<"555";
+                  break; 
+                  case 'M':cout<<"6";
+                  break; 
+                  case 'N':cout<<"66";
+                  break; 
+                  case 'O':cout<<"666";
+                  break; 
+                  case 'P':cout<<"7";
+                  break; 
+                  case 'Q':cout<<"77";
+                  break; 
+                  case 'R':cout<<"777";
+                  break; 
+                  case 'S':cout<<"7777";
+                  break; 
+                  case 'T':cout<<"8";
+                  break; 
+                  case 'U':cout<<"88";
+                  break; 
+                  case 'V':cout<<"888";
+                  break; 
+                  case 'W':cout<<"9";
+                  break; 
+                  case 'X':cout<<"99";
+                  break; 
+                  case 'Y':cout<<"999";
+                  break; 
+                  case 'Z':cout<<"9999";
+                  break; 
+                  case ' ':cout<<"0";
+                  break; 
+        }
+        i++;
+    }
+}
