@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int size,a=1;
+	cout<<"enter size\n";
+	cin>>size;
+	for(int i=1;i<=size;i++){
+		
+		
+			for(int l=i;l<=size-1;l++){
+			cout<<" ";}
+			for(int k=1;k<=i;k++){
+			cout<<a<<" ";
+		
+		}
+	
+		
+		cout<<endl;
+			a++;
+	}
+}
