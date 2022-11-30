@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int rows,k,a=1,b;
+	cout<<"enter rows\n";
+	cin>>rows;
+	for(int i=1;i<=rows;i++){
+		for(int j=i;j<=rows-1;j++){
+			cout<<" ";
+		}
+		
+		for(int l=1;l<=i;l++){
+			if(l==1 || l==i) cout<<a<<" ";
+			
+			
+			else{
+			b=i-1;
+			cout<<b<<" ";
+			 }
+		}
+		cout<<endl;
+	}
+	
+}
